@@ -1,15 +1,18 @@
 .container{
     margin: auto;
-    background: green;
+    margin-top: 170px;
     width: 50%;
     text-align: center;
+    font-family: 'PT Sans', sans-serif;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.493);
 }
 
 .contain-items{
     margin: auto;
-    background: aqua;
+
     display: inline-block;
     text-align: center;
+    padding: 40px;
 }
 
 .header{
@@ -18,5 +21,37 @@
     text-align: center;
     padding: 10px;
     font-size: 25px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    font-family: 'Archivo Black', sans-serif;
+}
+
+
+
+.input{
+    width: 350px;
+    font-size: 18px;
+    padding: 5px;
+    margin: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.239);
+    border-radius: 3px;
+    transition: box-shadow 0.5s;
+}
+
+.input:focus{
+    outline: none;
+    box-shadow: 0 0 10px rgb(0, 255, 0);
+    border-color: rgb(0, 255, 0);
+    text-decoration: none;
+}
+
+.button{
+    padding: 10px;
+    background: rgb(87, 255, 87);
+    border-style: none;
+    font-weight: bolder;
+}
+
+.button:hover{
+    background: green;
 }
