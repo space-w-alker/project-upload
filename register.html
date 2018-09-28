@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Registration</title>
+        <link rel="stylesheet" href="register.css">
+    </head>
+    <body>
+        <form action="/register.php" method="POST">
+            <table>
+
+                <tr>
+                    <td colspan="2"><div>Registration</div></td>
+                </tr>
+
+                <tr>
+                    <td>Username</td>
+                    <td><input type="text" name="username" class="input"/></td>
+                </tr>
+                <tr>
+                    <td>E-mail</td>
+                    <td><input type="email" name="email" class="input"/></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="password" class="input"/></td>
+                </tr>
+                <tr>
+                    <td>Confirm Password</td>
+                    <td><input type="password" name="c-password" class="input"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><a href="login.html">Already Registered</a></td>
+                </tr>
+            </table>
+            <input type="submit" value="Register"/>
+        </form>
+    </body>
+</html>

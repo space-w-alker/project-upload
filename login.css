@@ -1,0 +1,22 @@
+.container{
+    margin: auto;
+    background: green;
+    width: 50%;
+    text-align: center;
+}
+
+.contain-items{
+    margin: auto;
+    background: aqua;
+    display: inline-block;
+    text-align: center;
+}
+
+.header{
+    background: blue;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
