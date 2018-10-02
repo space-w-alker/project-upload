@@ -16,22 +16,42 @@
             <table>
                 <tr>
                     <td>Username</td>
-                    <td><input type="text" name="username" class="input"/></td>
+                    <td><input type="text" name="username" class="input" required="true"/></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td><div id="username-error"></div></td>
                 </tr>
 
                 <tr>
                     <td>Email</td>
-                    <td><input type="text" name="email" class="input"/></td>
+                    <td><input type="text" name="email" class="input" required="true"/></td>
+                </tr>
+
+                <tr>
+                        <td></td>
+                        <td><div id="email-error"></div></td>
                 </tr>
 
                 <tr>
                     <td>Password</td>
-                    <td><input type="password" name="password" class="input"/></td>
+                    <td><input type="password" name="password" class="input" required="true" id="pass"/></td>
+                </tr>
+
+                <tr>
+                        <td></td>
+                        <td><div id="password-error"></div></td>
                 </tr>
 
                 <tr>
                     <td>Confirm Password</td>
-                    <td><input type="password" name="c-password" class="input"/></td>
+                    <td><input type="password" name="c-password" class="input" required="true" id="c-pass"/></td>
+                </tr>
+
+                <tr>
+                        <td></td>
+                        <td><div id="c-password-error"></div></td>
                 </tr>
 
             </table>
@@ -40,5 +60,6 @@
         <a href="login.html">Already Registered?</a>
         </div>
         </div>
+        <script src="./scripts/form-validator.js"></script>
     </body>
 </html>
