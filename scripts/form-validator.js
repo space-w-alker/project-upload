@@ -46,7 +46,7 @@ function changeEventHandler(event) {
 }
 
 function emailValidateHandler(event){
-    expression = /\S*?@\S*/;
+    expression = /\S*?@\S+$/;
     if(event.target.value == "" || expression.test(event.target.value)){
         email_error.innerHTML = "";
         entry_valid = true;

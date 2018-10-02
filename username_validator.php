@@ -14,7 +14,7 @@ if($conn->error){
 $data = [];
 header('Content-type: application/json');
 
-if ($result->num_rows || $user == ""){
+if ($result->num_rows > 0 || $user == ""){
     $data = ['valid' => false];
     echo json_encode($data);
 }
