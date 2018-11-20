@@ -1,12 +1,12 @@
-username = document.querySelector("input[name=username]");
+username = document.querySelector("#reg-usr");
 username_error = document.querySelector("#username-error");
-email = document.querySelector("input[name=email]");
+email = document.querySelector("#reg-email");
 email_error = document.querySelector("#email-error");
-password = document.querySelector("input[name=password]");
+password = document.querySelector("#reg-pqd");
 password_error = document.querySelector("#password-error");
-c_password = document.querySelector("input[name=c-password]");
+c_password = document.querySelector("#reg-con-pwd");
 c_password_error = document.querySelector("#c-password-error");
-submit = document.querySelector("input[type=submit]");
+submit = document.querySelector("#reg-button");
 
 var entry_valid = false;
 
@@ -28,14 +28,12 @@ function changeEventHandler(event) {
         if(this.readyState == 4 && this.status == 200){
             //document.write(this.responseText);
             var res = JSON.parse(this.responseText);
-            console.log(res);
             if(res.valid){
-                console.log("Valid Username");
+
                 username_error.innerHTML = "";
                 entry_valid = true;
             }
             else{
-                console.log("Invalid Username");
                 username_error.innerHTML = "Username already in use";
                 entry_valid = false;
             }
@@ -80,7 +78,6 @@ function c_passwordValidateHandler(event){
 }
 
 function submitClickEventHandler(event){
-    console.log(entry_valid);
     if(entry_valid){
 
     }

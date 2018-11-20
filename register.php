@@ -19,12 +19,13 @@ $password = $_POST['password'];
 $hashed = password_hash($password, PASSWORD_DEFAULT);
 
 
-
 $sql2 = "insert into user_details (username, email) values ('$username', '$email')";
 $sql = "insert into login_details (username, password) values ('$username', '$hashed')";
 //echo $sql;
 
 if ($conn->query($sql2) === TRUE && $conn->query($sql)===TRUE) {
+    $_SESSION['username'] = $username;
+    header("Location: ./dashboard.php");
     echo "New record created successfully";
 } elseif($conn->error == "Duplicate entry 'spacewalker' for key 'PRIMARY'") {
     $_SESSION['error_title'] = "Invalid Username";

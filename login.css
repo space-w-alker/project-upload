@@ -31,7 +31,7 @@
 
 
 .input{
-    width: 350px;
+    max-width: 350px;
     font-size: 18px;
     padding: 5px;
     margin: 10px;

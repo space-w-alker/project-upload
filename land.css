@@ -1,0 +1,20 @@
+.input-label{
+    margin-top: 15px;
+}
+
+.action-span{
+    cursor: pointer;
+}
+
+.action-span:hover{
+    color: rgb(255, 255, 106);
+    text-decoration: underline;
+}
+
+.slide-text{
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 15px black;
+    font-size: 60px;
+    padding-top: 250px;
+}

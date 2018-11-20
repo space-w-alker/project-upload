@@ -1,35 +1,86 @@
 <html>
     <head>
-        <title>Registration</title>
-        <link rel="stylesheet" href="login.css">
+        <title>Login</title>
+        <link rel="stylesheet" href="">
         <link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./land.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	    
     </head>
     <body>
-        <div class="container">
-        <div class="header">
-            LOGIN
+        <div class="header" style="text-align:left;font-size:30px;background-color:rgb(128, 0, 0);padding:10;color:white;">
+            <img src="./icons/unilag-logo.png" height="80px" width="auto" />
+            University of Lagos Journal
+            <div style="position:relative; left:100;display:inline-block;background-color:green;width:auto;">
+                What is going on                 
+            </div>
         </div>
-        <div class="contain-items">
-        <form action="/login.php" method="POST">
-
-            <table>
-                <tr>
-                    <td>Username</td>
-                    <td><input type="text" name="username" class="input"/></td>
-                </tr>
-
-                <tr>
-                    <td>Password</td>
-                    <td><input type="password" name="password" class="input"/></td>
-                </tr>
-
-            </table>
-            <input type="submit" value="Log In" class="button"/>
+        <img class="img-responsive" id = "dis-0" src="./icons/display_1.jpg" style="position:absolute;height:100%;object-fit:none;width:100%;"/>
+        <img class="img-responsive" id = "dis-1" src="./icons/display_2.jpg" style="position:absolute;height:100%;object-fit:none;width:100%;"/>
+        <img class="img-responsive" id = "dis-2" src="./icons/display_3.jpg" style="position:absolute;height:100%;object-fit:none;width:100%;"/>
+        <img class="img-responsive" id = "dis-3" src="./icons/display_4.jpg" style="position:absolute;height:100%;object-fit:none;width:100%;"/>
+        <img class="img-responsive" id = "dis-4" src="./icons/display_5.jpg" style="position:absolute;height:100%;object-fit:none;width:100%;"/>
+        <div class="container-fluid" style="padding:0">
+        <div class="row" style="padding:0">
+        <div class="col-sm-9">
+            <div id="dis-text-0" class="slide-text">Welcome To The University Of Lagos Journal</div>
+            <div id="dis-text-1" class="slide-text">Login To Upload Journals</div>
+            <div id="dis-text-2" class="slide-text">Browse Our Massive Repertoire Of Papers</div>
+            <div id="dis-text-3" class="slide-text">Search For Journals By Keywords</div>
+            <div id="dis-text-4" class="slide-text">Read Educative And Insightful Articles</div>
+        </div>
+        <div class="col-sm-3" style="margin:0">
+        <div class="action-contain" id="login-contain" style="height:100%;background-color:rgba(255, 247, 0, 0.549);padding:13px;">
+        <form action="./login.php" method="POST">
+            <div style="text-align:center;font-size:25px;font-weight:bold;color:rgb(128, 0, 0);">
+                User Login
+            </div>
+                    <label for="usr" class="input-label">Username</label>
+                    <input type="text" name="username" class="form-control" id="usr"/>
+                    <label for="pwd" class="input-label">Password</label>
+                    <input type="password" name="password" class="form-control" id="pwd"/>
+            <div style="text-align:center">
+            <button class="btn btn-primary" style="margin-top:40px">Log In</button>
+            </div>
         </form>
-        <a href="register.html">Register</a>
-        </div>
+        <div style="text-align:center;color:white;"><span class="action-span" onclick="show_register()" href="#">Create Account</span> | <span class="action-span">Login as Admin</span></div>
         </div>
         
+        <div class="action-contain" id="reg-contain" style="height:100%;background-color:rgba(255, 247, 0, 0.549);padding:13px;">
+        <form action="./register.php" method="POST">
+
+            <div style="text-align:center;font-size:25px;font-weight:bold;color:rgb(128, 0, 0);">
+                    User Registration
+                </div>
+                    <label for="reg-user" class="input-label">Username</label> 
+                    <input type="text" name="username" id="reg-usr" class="form-control" required="true"/>
+                    <div style="color:white;text-align:center;background-color:rgb(255, 108, 108);" id="username-error"></div>
+                
+                    <label for="reg-email" class="input-label">Email</label>
+                    <input type="text" name="email" id="reg-email" class="form-control" required="true"/>
+                    <div style="color:white;text-align:center;background-color:rgb(255, 108, 108);" id="email-error"></div>
+        
+                    <label for="reg-pwd" class="input-label">Password</label>
+                    <input type="password" name="password" id="reg-pqd" class="form-control" required="true" id="pass"/>
+                    <div style="color:white;text-align:center;background-color:rgb(255, 108, 108);" id="password-error"></div>
+
+                    <label for="reg-con-pwd" class="input-label">Confirm Password</label>
+                    <input type="password" name="c-password" id="reg-con-pwd" class="form-control" required="true" id="c-pass"/>
+                    <div style="color:white;text-align:center;background-color:rgb(255, 108, 108);" id="c-password-error"></div>
+                
+                    <div style="text-align:center">
+                            <button id="reg-button" class="btn btn-primary" style="margin-top:40px">Register</button>
+                    </div>
+        </form>
+        <div style="text-align:center;color:white;"><span class="action-span" onclick="show_login()" href="#">Already a User? Login</span> | <span class="action-span">Login as Admin</span></div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <script src="./scripts/land_page.js"></script>
+        <script src="./scripts/form-validator.js"></script>
     </body>
 </html>
