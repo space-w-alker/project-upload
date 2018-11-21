@@ -1,7 +1,6 @@
 <?php
 include "./defines.php";
 session_start();
-$conn  = new mysqli($servername, 'root', $password, $dbname);
     $username = $_POST['username'];
     $password = $_POST['password'];
 

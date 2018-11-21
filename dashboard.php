@@ -1,4 +1,6 @@
 <?php session_start();
+require ('./defines.php');
+
 if ($_SESSION['username'] == null){
     header("Location: ./login.html");
 }
@@ -15,39 +17,20 @@ if ($_SESSION['username'] == null){
         <link href="./dashboard.css" rel="stylesheet">
     </head>
     <body>
-        <div class="header">
-                ABSTRACT UPLOADER
-            <div class="sub-text">
-                <?php $username = $_SESSION['username'];
-                echo "Logged In As $username";?>
+    <div class="header" style="text-align:left;font-size:30px;background-color:rgb(128, 0, 0);padding:10;color:white;">
+            <div style="width:15%">
+                <img src="./icons/unilag-logo.png" height="80px"/>
+            </div>
+            <div style="text-align:center;width:50%;font-size:35px">
+                Welcome to the University of Lagos Journal
+            </div>
+            <div style="text-align:end;width:32%;overflow:hidden;">
+                <a href="#" style="color:yellow; font-size:14px">Browse Journals</a> | 
+                <form style="display:inline">
+                    <input type="text" placeholder="Search by Keyword" name="search" style="display:inline"/>
+                    <button style="display:inline">Search</button>
+                </form>
             </div>
         </div>
-        <form action="upload.php" method="post" enctype="multipart/form-data">
-            <input type="file" name="fileToUpload" id="fileToUpload">
-            <div class="icon-contain">
-                <label for="fileToUpload">
-                    <img src="./icons/add-file.svg" height="150px" width="auto" id="select-file-img"/>
-                </label>
-                
-                <div id="file-selected">No File Selected</div>
-                <br/>
-                <span>Summary of Paper
-                </span>
-                </br>
-                <textarea id="textarea"
-                ></textarea>
-                <br/>
-                <button id="upload-button">
-                    <img src="./icons/cloud-storage-uploading-option.svg" height="30px" width="auto" id="upload-btn-img"/> Upload
-                </button>
-                
-                <div id="file-name">
-                    No File Uploaded
-                </div>
-                <br/>
-                <button id="log-out">Log Out</button>
-            </div>
-        </form>
-        <script src="./scripts/dashboard-controller.js"></script>
     </body>
 </html>

@@ -1,10 +1,12 @@
 .input-label{
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .action-span{
     cursor: pointer;
+    color: maroon;
 }
+
 
 .action-span:hover{
     color: rgb(255, 255, 106);
@@ -17,4 +19,9 @@
     text-shadow: 0 0 15px black;
     font-size: 60px;
     padding-top: 250px;
+}
+
+.header > div{
+    display: inline-block;
+    font-size: 13px;
 }

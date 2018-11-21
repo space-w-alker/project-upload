@@ -12,10 +12,18 @@
     </head>
     <body>
         <div class="header" style="text-align:left;font-size:30px;background-color:rgb(128, 0, 0);padding:10;color:white;">
-            <img src="./icons/unilag-logo.png" height="80px" width="auto" />
-            University of Lagos Journal
-            <div style="position:relative; left:100;display:inline-block;background-color:green;width:auto;">
-                What is going on                 
+            <div style="width:15%">
+                <img src="./icons/unilag-logo.png" height="80px"/>
+            </div>
+            <div style="text-align:center;width:50%;font-size:35px">
+                Welcome to the University of Lagos Journal
+            </div>
+            <div style="text-align:end;width:32%;overflow:hidden;">
+                <a href="#" style="color:yellow; font-size:14px">Browse Journals</a> | 
+                <form style="display:inline">
+                    <input type="text" placeholder="Search by Keyword" name="search" style="display:inline"/>
+                    <button style="display:inline">Search</button>
+                </form>
             </div>
         </div>
         <img class="img-responsive" id = "dis-0" src="./icons/display_1.jpg" style="position:absolute;height:100%;object-fit:none;width:100%;"/>
@@ -58,6 +66,14 @@
                     <label for="reg-user" class="input-label">Username</label> 
                     <input type="text" name="username" id="reg-usr" class="form-control" required="true"/>
                     <div style="color:white;text-align:center;background-color:rgb(255, 108, 108);" id="username-error"></div>
+
+                    <label for="fst-name" class="input-label">First Name</label>
+                    <input type="text" name="firstname" id="fst-name" class="form-control" required="true"/>
+                    <div style="color:white;text-align:center;background-color:rgb(255, 108, 108);" id="fst-name-error"></div>
+
+                    <label for="lst-name" class="input-label">Last Name</label>
+                    <input type="text" name="lastname" id="lst-name" class="form-control" required="true"/>
+                    <div style="color:white;text-align:center;background-color:rgb(255, 108, 108);" id="lst-name-error"></div>
                 
                     <label for="reg-email" class="input-label">Email</label>
                     <input type="text" name="email" id="reg-email" class="form-control" required="true"/>
@@ -70,12 +86,13 @@
                     <label for="reg-con-pwd" class="input-label">Confirm Password</label>
                     <input type="password" name="c-password" id="reg-con-pwd" class="form-control" required="true" id="c-pass"/>
                     <div style="color:white;text-align:center;background-color:rgb(255, 108, 108);" id="c-password-error"></div>
+
                 
                     <div style="text-align:center">
                             <button id="reg-button" class="btn btn-primary" style="margin-top:40px">Register</button>
                     </div>
         </form>
-        <div style="text-align:center;color:white;"><span class="action-span" onclick="show_login()" href="#">Already a User? Login</span> | <span class="action-span">Login as Admin</span></div>
+        <div style="text-align:center;"><span class="action-span" onclick="show_login()" href="#">Already a User? Login</span> | <span class="action-span">Login as Admin</span></div>
         </div>
         </div>
         </div>

@@ -1,11 +1,8 @@
 <?php
 
 include('./defines.php');
-echo $servername;
 
 session_start();
-
-$conn  = new mysqli($servername, $username, $password, $dbname);
 
 if($conn->connect_error){
     die("connection failed ". $conn->connect_error);
@@ -16,6 +13,8 @@ if($conn->connect_error){
 $username = $_POST['username'];
 $email = $_POST['email'];
 $password = $_POST['password'];
+$firstname = $_POST['firstname'];
+$lastname = $_POST['lastname'];
 $hashed = password_hash($password, PASSWORD_DEFAULT);
 
 
